@@ -11,3 +11,16 @@ def get_longest_workout(workouts):
         return longest
 
     return longest
+
+def total_duration(workouts):
+    
+    total = 0
+    for workout in workouts:
+        total += workout['duration']
+    return total
+
+def average_duration(workouts):
+    if not workouts:
+        return 0
+    return total_duration(workouts) / len(workouts)
+    
